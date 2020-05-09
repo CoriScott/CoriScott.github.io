@@ -1,0 +1,48 @@
+Your goal is to create a map including:
+
+1) Your assigned watershed(s) polygons as a basemap with a 'lightgrey' fill and 'black' outline.
+
+2) Graduated colors (points) of temperature in July 2008 for the stations in your watershed(s) using the 'Oranges' color scheme.
+
+A basic workflow for you to follow:
+
+Install the libraries that will be needed onto the virtual machine. (e.g. !pip install pandas)
+Import the modules that will be needed and check to make sure they load without errors.
+Read in the source data files using the appropriate module for the file type.
+Create a subset of your assigned watershed(s) from the watersheds geodataframe.
+Create a subset of the water quality stations in your assigned watershed(s) from the stations geodataframe.
+Filter and subset the water quality dataframe for your assigned watershed(s), the temperature variable, and dates in the range of July 1, 2008 to July 31, 2008. (Believe it or not, we have done this, just not with dates. See Method 1 at:
+https://chrisalbon.com/machine_learning/preprocessing_dates_and_times/select_date_and_time_ranges/)
+Join (merge) your watersheds' stations geodataframe to your filtered water quality dataframe. Use an inner join!
+Define a function that creates the map and then call the function to display the map in the console output. You do not need to save a file/image/figure of the map. (The method for creating graduated color points is the same as graduated color polygons.)
+
+!pip install pandas
+!pip install geopandas
+!pip install matplotlib
+!pip install descartes
+
+import os, pandas as p, geopandas as gp, matplotlib.pyplot as plt
+
+df = p.read_excel('attendeddata.xlsx')
+shpWatersheds = 'IL_DWMWPP_WATERSHEDS_POLY.shp'
+ws = gp.read_file(shpWatersheds)
+shpStations = 'DWMWPP_WATER_QUALITY_STATIONS.shp'
+st = gp.read_file(shpStations)
+
+watersheds = ws[(ws["DWM_NAME"] == "DEERFIELD") | (ws["DWM_NAME"] == "WESTFIELD")]
+
+stations =   st[(st['WATERSHED'] == 'Deerfield') | (st['WATERSHED'] == 'Westfield')]
+
+df = df[(df['dDATE'] >= '2008-7-1') & (df['dDATE'] <= '2008-7-31')]
+wsdf = df.filter(['Watershed','nTEMP','dDATE'])
+
+innerJoin = p.merge(wsdf, stations, how='inner', left_on='Watershed', right_on='WATERSHED')
+
+def showmap():    
+    ax = watersheds.plot(color="lightgrey", edgecolor="black")
+    ax.set_axis_off()
+    tempplot = stations.plot(ax=ax,cmap='Oranges',legend=True)
+showmap()
+
+
+	
