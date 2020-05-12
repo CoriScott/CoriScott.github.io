@@ -1,6 +1,12 @@
 # CoriScott.github.io
 Repository for School Projects and Papers
 
+## GIS Resume
+
+Up to date resume with relevant coursework and internship information
+
+[Cori Scott-Undergrad Resume](https://docs.google.com/document/d/1iBxBgMEq34eLK1QT_VgKi_gs8rM2uu51z5kqHzU16wE/edit?usp=sharing)
+
 ## Final Project for Spatial Data Methods
 
 A GIS project written in python code within a Google Colab IDE.
