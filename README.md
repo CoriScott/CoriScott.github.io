@@ -15,13 +15,13 @@ Thesis centering on the use of PPGIS in the democratization of urban planning pr
 
 ## Final Project for Spatial Data Methods
 
-A GIS project written in python code within a Google Colab IDE.
+A GIS project written in python code in the Google Colab IDE.
 
 [csFinalPractical.ipynb](https://colab.research.google.com/drive/1i-TIetfOE_j1x4A2iXS_NjUAD2EIBB5k)
 
 ## Happy Birthday
 
-This was the first autonomous code I wrote, a birthday message to my boyfriend written in c++
+This was the first autonomous code I wrote, a birthday message written in c++
 
 ## Ethnography paper
 
