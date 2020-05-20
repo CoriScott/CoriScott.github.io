@@ -29,19 +29,20 @@ ws = gp.read_file(shpWatersheds)
 shpStations = 'DWMWPP_WATER_QUALITY_STATIONS.shp'
 st = gp.read_file(shpStations)
 
-watersheds = ws[(ws["DWM_NAME"] == "DEERFIELD") | (ws["DWM_NAME"] == "WESTFIELD")]
+watersheds = ws[(ws["DWM_NAME"] == "BUZZARDS BAY") | (ws["DWM_NAME"] == "SOUTH COASTAL")]
 
-stations =   st[(st['WATERSHED'] == 'Deerfield') | (st['WATERSHED'] == 'Westfield')]
+stations = st.filter(["WATERSHED", "geometry"])
+stations = stations[(stations["WATERSHED"] == "Buzzards Bay") | (stations["WATERSHED"] == "South Coastal")]
 
 df = df[(df['dDATE'] >= '2008-7-1') & (df['dDATE'] <= '2008-7-31')]
-wsdf = df.filter(['Watershed','nTEMP','dDATE'])
+wsdf = df.filter(["Watershed","nTEMP","dDATE"])
 
-innerJoin = p.merge(wsdf, stations, how='inner', left_on='Watershed', right_on='WATERSHED')
+innerJoin = p.merge(stations, wsdf, how="inner", left_on="WATERSHED", right_on="Watershed")
 
 def showmap():    
     ax = watersheds.plot(color="lightgrey", edgecolor="black")
     ax.set_axis_off()
-    tempplot = stations.plot(ax=ax,cmap='Oranges',legend=True)
+    tempplot = innerJoin.plot(column='nTEMP', ax=ax, cmap="Oranges", legend=True);
 showmap()
 
 
