@@ -1,32 +1,27 @@
 # CoriScott.github.io
 Repository for School Projects and Papers
 
-## GIS Resume
+## 2023 Resume
 
 Up to date resume with relevant coursework and internship information
 
-[Cori Scott-Undergrad Resume](https://docs.google.com/document/d/1iBxBgMEq34eLK1QT_VgKi_gs8rM2uu51z5kqHzU16wE/edit?usp=sharing)
+[Cori Scott-Undergrad Resume]
 
 ## Senior Thesis - The Right Tool for the Job
 
 Thesis centering on the use of PPGIS in the democratization of urban planning processes
 
-[CScott_Senior_Thesis](https://docs.google.com/document/d/1xm4IrvDwUElL4d9QuY_dQf2-kUQWJAYwwc2e57BTtjQ/edit?usp=sharing)
+[CScott_Final_Thesis] 
 
-## Final Project for Spatial Data Methods
+## StoryMap Assignment - Mapping the Thanksgiving Harvest
 
-A GIS project written in python code in the Google Colab IDE.
+Advanced GIS course assignment, the purpose of which is to introduce GIS to primary school students using ArcGIS Story Maps
 
-[csFinalPractical.ipynb](https://colab.research.google.com/drive/1i-TIetfOE_j1x4A2iXS_NjUAD2EIBB5k)
+[CScott GS318 Story Map]
 
-## Happy Birthday
+## GIS Assignment - Deriving Temperature from LandSat 8 Thermal Bands
 
-This was the first autonomous code I wrote, a birthday message written in c++
+Remote Sensing course assigment, learning to estimate ground surface temperatures using thermal bands from the LandSat 8 sattelite
 
-## Ethnography paper
+[CScott Exercise 6 Thermal Bands]
 
-A comparison of 3 different immigration stories and research into their origin nations.
-
-## Advanced GIS Final
-
-A needs assessment for a land trust, with a GIS map created in ESRI's ArcMap.
