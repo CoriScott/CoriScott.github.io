@@ -5,7 +5,7 @@ Repository for School Projects and Papers
 
 Up to date resume with relevant coursework and internship information
 
-[Cori Scott-Undergrad Resume]
+[Cori Scott-Undergrad Resume] https://docs.google.com/document/d/1Vrp1ZLFDrLHN8vhkp6L1pIf1SdK1ZVxi/edit?usp=drive_link&ouid=107429528114171190014&rtpof=true&sd=true
 
 ## Senior Thesis - The Right Tool for the Job
 
